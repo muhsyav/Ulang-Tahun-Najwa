@@ -1,0 +1,346 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  /* Tambah background gradient pastel yang lucu dan lembut */
+  background: linear-gradient(135deg, #ffe6f2 0%, #e8f0fe 100%);
+  color: #4a4a4a;
+}
+
+.song {
+  visibility: hidden;
+}
+
+.container {
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  visibility: hidden;
+  width: 100vw;
+}
+
+.container > div {
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 20vh;
+}
+
+.one {
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: #ff69b4; /* Warna pink cerah untuk nama */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.two {
+  font-size: 1.4rem;
+  font-weight: lighter;
+  color: #6c757d;
+}
+
+.three {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #ff8da1;
+}
+
+/* Kotak Chat dibikin lebih membulat dan estetik */
+.four .text-box {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 2px solid #ffccd5;
+  border-radius: 15px; /* Lebih membulat */
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  width: 600px;
+  box-shadow: 0 10px 20px rgba(255, 182, 193, 0.3); /* Efek bayangan lembut */
+}
+
+.text-box p {
+  margin: 0;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.text-box span {
+  visibility: hidden;
+}
+
+/* Tombol Send dibikin lebih gemas dan interaktif */
+.text-box .fake-btn {
+  background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+  border-radius: 20px;
+  bottom: -60px;
+  color: #fff;
+  padding: .6rem 1.5rem;
+  position: absolute;
+  right: 5px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(255, 117, 140, 0.4);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Efek saat tombol disorot mouse */
+.text-box .fake-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 117, 140, 0.6);
+}
+
+.five p {
+  font-size: 2.2rem;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+/* Animasi highlight di kata SPESIAL */
+.idea-3 strong {
+  background: #ffecb3;
+  color: #ff6f00;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 3px 8px;
+  box-shadow: 0 4px 0 #ffe082;
+}
+
+.five .idea-5 {
+  font-size: 4rem;
+  color: #ff5252;
+}
+
+.idea-5 span, .idea-6 span, .wish-hbd span {
+  display: inline-block;
+}
+
+.idea-6 span{
+  font-size: 15rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff758c, #ff7eb3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.six {
+  position: relative;
+  top: 10vh;
+  z-index: 1;
+}
+
+/* Foto Profil dibuat lingkaran rapi dengan border pink */
+.six img.profile-picture {
+  display: inline-block;
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.six .hat {
+  left: 48%;
+  position: absolute;
+  top: -25%;
+  width: 90px;
+}
+
+.baloons img {
+  display: inline-block;
+  position: absolute;
+  width: 360px; /* Ukuran balon disamakan agar rapi */
+}
+
+.baloons img:nth-child(even) { left: -10%; }
+.baloons img:nth-child(odd) { right: -10%; }
+.baloons img:nth-child(3n + 0) { left: 30%; }
+
+.seven, .eight {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+.eight svg {
+  left: 0;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  width: 25px;
+  z-index: -1;
+}
+
+/* Variasi posisi ornamen confetti lingkaran */
+.eight svg:nth-child(1) { fill: #bd6ecf; left: 5vw; top: 7vh; }
+.eight svg:nth-child(2) { fill: #7dd175; left: 35vw; top: 23vh; }
+.eight svg:nth-child(3) { fill: #349d8b; left: 23vw; top: 33vh; }
+.eight svg:nth-child(4) { fill: #347a9d; left: 57vw; top: 43vh; }
+.eight svg:nth-child(5) { fill: #c66053; left: 7vw; top: 68vh; }
+.eight svg:nth-child(6) { fill: #bfaa40; left: 77vw; top: 42vh; }
+.eight svg:nth-child(7) { fill: #e3bae8; left: 83vw; top: 68vh; }
+.eight svg:nth-child(8) { fill: #8762cb; left: 37vw; top: 86vh; }
+.eight svg:nth-child(9) { fill: #9a90da; left: 87vw; top: 94vh; }
+
+.wish-hbd {
+  font-size: 3.5em;
+  margin: 20px 0 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.wish h5 {
+  font-size: 2rem;
+  font-weight: lighter;
+  margin: 10px 0 0;
+  color: #6c757d;
+}
+
+.nine p {
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+#replay {
+  cursor: pointer;
+  z-index: 3;
+  color: #ff758c;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Media Queries */
+@media screen and (max-height: 1000px) { .six .hat { left: 43%; } }
+@media screen and (max-height: 800px) { .six .hat { left: 41%; } }
+@media screen and (max-height: 700px) { .six .hat { left: 38%; } }
+
+@media screen and (max-width: 500px) {
+  .container { width: 90%; }
+  .four .text-box { width: 90%; }
+  .text-box .fake-btn { bottom: -45px; right: 5px; }
+  .idea-5 span { display: block; }
+  .idea-6 span { font-size: 10rem; }
+  .six .hat { width: 60px; top: -20%; left: 38%; }
+  .six img.profile-picture { height: 180px; width: 180px; }
+  .wish-hbd { font-size: 2.5em; }
+  .wish h5 { font-size: 1.4rem; }
+  .nine p { font-size: 1.5rem; }
+}
+/* Animasi Baru untuk "Kamu orang yang Spesial" */
+.five .idea-5 {
+  font-size: 4rem;
+  font-weight: bold;
+  /* Membuat teks berwarna gradasi cerah */
+  background: linear-gradient(45deg, #ff416c, #ff4b2b, #bc4e9c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  
+  /* Efek pop-up dan bergoyang lembut */
+  animation: popAndShake 1.2s ease-in-out infinite alternate;
+}
+
+/* Kerangka gerakan goyangnya */
+@keyframes popAndShake {
+  0% {
+    transform: scale(0.95) rotate(-2deg);
+  }
+  50% {
+    transform: scale(1.05) rotate(2deg);
+  }
+  100% {
+    transform: scale(1) rotate(-1deg);
+  }
+}
+
+/* Mengatur emoticon ":)" agar ikut berputar gemas */
+.five .idea-5 span {
+  display: inline-block;
+  color: #ff416c;
+  -webkit-text-fill-color: #ff416c; /* Mengunci warna solid */
+  animation: spinEmoticon 2s linear infinite;
+  margin-left: 10px;
+}
+
+/* Kerangka gerakan berputar emoticon */
+@keyframes spinEmoticon {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.2); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+/* --- KHUSUS MERAPIKAN TEKS PUITIS TENGAH AGAR TIDAK MENTOK --- */
+
+/* Jarak aman kanan-kiri untuk teks 'Tapi setelah aku pikir-pikir lagi...' */
+.idea-2 {
+    padding: 0 25px !important;
+    line-height: 1.6 !important;
+    box-sizing: border-box !important;
+}
+
+/* Jarak aman untuk teks 'Aku ingin merayakan hari lahirmu dengan cara yang jauh lebih SPESIAL' */
+.idea-3 {
+    padding: 0 25px !important;
+    line-height: 1.6 !important;
+    box-sizing: border-box !important;
+}
+
+/* Jarak aman untuk teks 'Kenapa? Karena bagi aku...' */
+.idea-4 {
+    padding: 0 25px !important;
+    line-height: 1.6 !important;
+    box-sizing: border-box !important;
+}
+
+/* Jarak aman untuk teks 'Kamu orang yang Spesial' */
+.idea-5 {
+    padding: 0 20px !important;
+    line-height: 1.6 !important;
+    box-sizing: border-box !important;
+}
+
+/* Tambahan khusus kalau dibuka di layar HP kecil biar fontnya otomatis menyesuaikan */
+@media screen and (max-width: 450px) {
+    .idea-2, .idea-3, .idea-4 {
+        font-size: 1.2rem !important; /* Menurunkan sedikit ukuran font agar pas di layar HP */
+    }
+    .idea-5 {
+        font-size: 1.4rem !important; /* Ukuran pas untuk teks penutup agar tetap kelihatan spesial */
+    }
+}
+
+body {
+    animation: romanticGlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes romanticGlow {
+    0% { background-color: #ffffff; }
+    100% { background-color: #ffeff2; } /* Pink pastel super soft */
+}
+
+/* Mengubah foto akhir menjadi gaya Polaroid Estetik */
+.profile-picture {
+    border-radius: 4px !important; /* Hilangkan bentuk bulat */
+    background: #ffffff !important;
+    padding: 12px 12px 35px 12px !important; /* Jarak bawah lebih tebal untuk gaya polaroid */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+    border: none !important;
+}
+
+.profile-picture {
+    animation: mengambang 3s ease-in-out infinite alternate;
+}
+
+@keyframes mengambang {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-10px); } /* Bergerak naik turun 10px secara halus */
+}
